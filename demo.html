@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    
+    <!-- Include Three.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- HERO / HOME SECTION -->
+<section id="home">
+  <!-- Three.js 3D Canvas Background -->
+  <canvas id="hero-3d-canvas"></canvas>
+
+  <!-- Lighting & Gradient Overlays -->
+  <div class="hero-vignette"></div>
+
+  <!-- Hero Content Layer -->
+  <div class="hero-container">
+    <div class="hero-badge-wrapper">
+      <span class="hero-badge">
+        <span class="pulse-dot"></span> Next-Gen Post-Production
+      </span>
+    </div>
+
+    <h1 class="hero-glitch-title" data-text="VELORA CREATIVES">
+      VELORA <span class="gradient-text">CREATIVES</span>
+    </h1>
+
+    <p class="hero-description">
+      We craft hyper-engaging video assets, high-retention short-form reels, and cinematic storytelling that scales brands and creators globally.
+    </p>
+
+    <div class="hero-cta-group">
+      <a href="#projects" class="btn-3d primary">
+        <span>Explore Work</span>
+        <div class="btn-glow"></div>
+      </a>
+      <a href="#contact" class="btn-3d secondary">
+        <span>Book Discovery Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating 3D Video Viewports -->
+  <div class="floating-card-wrapper left">
+    <div class="glass-card">
+      <div class="card-header">
+        <span class="live-tag">REC</span>
+        <span class="time-code">00:14:28</span>
+      </div>
+      <div class="card-video-box">
+        <video autoplay loop muted playsinline src="your-video-1.mp4"></video>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-card-wrapper right">
+    <div class="glass-card">
+      <div class="card-header">
+        <span class="format-tag">4K RAW</span>
+        <span class="fps-tag">60 FPS</span>
+      </div>
+      <div class="card-video-box">
+        <video autoplay loop muted playsinline src="your-video-2.mp4"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <!-- Interactive Three.js Background Canvas -->
+  <canvas id="about-3d-canvas"></canvas>
+
+  <div class="about-container">
+    <!-- Left Column: Video Feature Frame -->
+    <div class="about-video-wrapper">
+      <div class="video-3d-frame">
+        <div class="frame-top-bar">
+          <span class="status-indicator"></span>
+          <span class="frame-title">VELORA_REEL_INTRO.MP4</span>
+          <span class="software-badges">Ae | Pr</span>
+        </div>
+        
+        <div class="video-container">
+          <video id="intro-showcase-video" controls poster="poster.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/f3c0d68d70f2504d19665449c6ee37a7.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Content & Capabilities -->
+    <div class="about-content">
+      <span class="section-tag">WHO WE ARE</span>
+      <h2 class="about-heading">ENGINEERED FOR <span class="gradient-text">MAXIMUM RETENTION</span></h2>
+      <p class="about-text">
+        At <strong>Velora Creatives</strong>, we don't just cut clips—we architect visual experiences designed to capture attention and rack up millions of views. Powered by Adobe After Effects and Premiere Pro, we turn raw footage into high-converting visual assets.
+      </p>
+
+      <!-- Grid Highlights based on your intro video -->
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">⚡</span>
+          <h4>Smooth Transitions</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🎯</span>
+          <h4>Motion Tracking</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🎨</span>
+          <h4>Color Grading</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🏎️</span>
+          <h4>Speed Ramping</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">👾</span>
+          <h4>Character Animation</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔥</span>
+          <h4>Multi-Niche (Gaming & Stories)</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+  <div class="services-container">
+    
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-tag">WHAT WE DO</span>
+      <h2 class="services-heading">HIGH-IMPACT <span class="gradient-text">EDITING SERVICES</span></h2>
+      <p class="services-subtext">Tailored video post-production built to boost watch time, retention, and conversions across all platforms.</p>
+    </div>
+
+    <!-- 3D Interactive Service Cards Grid -->
+    <div class="services-grid">
+      
+      <!-- Card 1: Short-Form Content -->
+      <div class="service-card">
+        <div class="card-canvas-box" data-shape="torus"></div>
+        <div class="card-info">
+          <span class="service-num">01</span>
+          <h3>Short-Form Retention Edits</h3>
+          <p>YouTube Shorts, Instagram Reels, and TikToks engineered with dynamic captions, sound design, and fast-paced motion graphics to maximize watch time.</p>
+          <ul class="service-list">
+            <li>Dynamic Animated Subtitles</li>
+            <li>Sound Effects & Foley</li>
+            <li>Pattern Interrupts & Zoom Cuts</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Long-Form & Vlogs -->
+      <div class="service-card">
+        <div class="card-canvas-box" data-shape="cube"></div>
+        <div class="card-info">
+          <span class="service-num">02</span>
+          <h3>Long-Form YouTube & Vlogs</h3>
+          <p>Complete episode & vlog editing with story-pacing, multi-cam switching, color grading, and custom lower thirds to keep viewers hooked from start to finish.</p>
+          <ul class="service-list">
+            <li>Cinematic Pacing & Storytelling</li>
+            <li>Multi-Camera Syncing</li>
+            <li>Custom B-Roll Integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: Motion Graphics & VFX -->
+      <div class="service-card">
+        <div class="card-canvas-box" data-shape="icosahedron"></div>
+        <div class="card-info">
+          <span class="service-num">03</span>
+          <h3>Motion Graphics & VFX</h3>
+          <p>Custom 2D/3D visual effects, logo reveals, kinetic typography, and motion tracking to give your brand a distinct visual identity.</p>
+          <ul class="service-list">
+            <li>3D Object & Camera Tracking</li>
+            <li>Custom Title Animations</li>
+            <li>Green Screen & Roto Keying</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO / WORK SECTION -->
+
+<section id="portfolio" class="portfolio-section">
+  <div class="portfolio-container">
+    
+    <div class="portfolio-header">
+      <div class="header-tag-box">
+        <span class="pulse-dot"></span>
+        <span class="section-tag">SELECTED WORKS</span>
+      </div>
+      <h2 class="portfolio-title">FEATURED <span class="gradient-text">REELS</span></h2>
+      <p class="portfolio-subtext">High-retention vertical edits engineered for Reels, Shorts, and TikToks.</p>
+    </div>
+
+    <!-- 9:16 Grid Setup -->
+    <div class="reels-grid">
+      
+      <!-- Reel Card 1 -->
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster1.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/28689e1d04a3eccc3347b92582165453.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+          <!-- <span class="badge-tag">Talking Head + Motion</span> -->
+        </div>
+        <div class="card-info">
+          <h3>CR 7 Edit</h3>
+        </div>
+      </div>
+
+      <!-- <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster2.png">
+            <source src="sample.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+        </div>
+        <div class="card-info">
+          <h3>Talking Head + Motion</h3>
+        </div>
+      </div> -->
+
+      <!-- Reel Card 2 -->
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster3.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/7b99f0c4257251c9a333a9e561d91ad5.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+          <!-- <span class="badge-tag">Anime Edit</span> -->
+        </div>
+        <div class="card-info">
+          <h3>Anime Edit</h3>
+          <!-- <p>Velocity Sync • Color Grade</p> -->
+        </div>
+      </div>
+
+      <!-- Reel Card 3 -->
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster4.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/2db312aa06d1ad3a04b66ad52eecdd04.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+          <!-- <span class="badge-tag">Documentary Short</span> -->
+        </div>
+        <div class="card-info">
+          <h3>Subtitles Edit</h3>
+          <!-- <p>Pattern Interrupts • Sound FX</p> -->
+        </div>
+      </div>
+      
+      <!-- Reel Card 4 -->
+      <div class="reel-card">
+          <div class="video-wrapper aspect-9-16">
+              <video loop muted playsinline poster="poster44.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/bc948eb245afa4c341dc4e7703398aff.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+        </div>
+        <!-- <span class="badge-tag">Gorilla X Kong</span> -->
+    </div>
+    <div class="card-info">
+        <h3>Gorilla X Kong</h3>
+        <!-- <p>Motion Tracking • VFX</p> -->
+    </div>
+</div>
+<div class="reel-card">
+  <div class="video-wrapper aspect-9-16">
+    <video loop muted playsinline poster="poster5.png">
+      <source src="https://veloracreativesltd.my.canva.site/_assets/video/133db28937336ca75812072f9229c27a.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay">
+      <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+    </div>
+    <!-- <span class="badge-tag">Documentary Short</span> -->
+  </div>
+  <div class="card-info">
+    <h3>PodCast Edit</h3>
+    <!-- <p>Pattern Interrupts • Sound FX</p> -->
+  </div>
+</div>
+
+      <!-- Reel Card 5 -->
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster56.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/1d6ca1758cd735195d363c8995eee68f.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+          <!-- <span class="badge-tag">Motion Graphics</span> -->
+        </div>
+        <div class="card-info">
+          <h3>Motion Graphics</h3>
+          <!-- <p>Speed Ramping • Beat Match</p> -->
+        </div>
+      </div>
+
+      <!-- Reel Card 6 -->
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="poster66.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/f58147b48c1974932d6c14862cca2d8f.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+          <!-- <span class="badge-tag">Explainer Short</span> -->
+        </div>
+        <div class="card-info">
+          <h3>Mr.Beast Clip</h3>
+          <!-- <p>Lower Thirds • Asset Animation</p> -->
+        </div>
+      </div>
+<!-- 
+      <div class="reel-card">
+        <div class="video-wrapper aspect-9-16">
+          <video loop muted playsinline poster="ai.png">
+            <source src="ai.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn-circle"><span class="play-icon">▶</span></div>
+          </div>
+        </div>
+        <div class="card-info">
+          <h3>AI Edit</h3>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- LONG-FORM DOCUMENTARY SHOWCASE (16:9) -->
+<section id="documentary-portfolio" class="doc-section">
+  <div class="doc-container">
+    
+    <!-- Section Header -->
+    <div class="doc-header">
+      <div class="tag-badge">
+        <span class="glow-dot"></span>
+        <span class="tag-text">DOCUMENTARY & VIDEO ESSAYS</span>
+      </div>
+      <h2 class="doc-title">LONG-FORM <span class="gradient-text">PRODUCTIONS</span></h2>
+      <p class="doc-subtext">High-retention, story-driven 16:9 edits with custom motion graphics, kinetic typography, and deep sound design.</p>
+    </div>
+
+    <!-- 16:9 Video Grid -->
+    <div class="doc-grid">
+      
+      <!-- Video Card 1 -->
+      <div class="doc-card">
+        <div class="video-box aspect-16-9">
+          <video loop muted playsinline poster="louis.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/9cc32d2f0852554d19a6e707e022e567.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn">
+              <span>▶</span>
+            </div>
+          </div>
+          <span class="category-chip">Business Documentary</span>
+        </div>
+        <div class="doc-info">
+          <div class="info-top">
+            <h3>The Dark Side of Louis Vuitton</h3>
+            <!-- <span class="duration-badge">12:45</span> -->
+          </div>
+          <!-- <p>Magnates Media style motion graphics • Custom asset cutouts • Deep sound design</p> -->
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="doc-card">
+        <div class="video-box aspect-16-9">
+          <video loop muted playsinline poster="ani.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/e9c13da9ec56cbec4ee45c51e841d592.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn">
+              <span>▶</span>
+            </div>
+          </div>
+          <span class="category-chip">Animated Video</span>
+        </div>
+        <div class="doc-info">
+          <div class="info-top">
+            <h3>How AI is Changing Everything</h3>
+            <span class="duration-badge">18:20</span>
+          </div>
+          <p>Kinetic typography • Fast-paced B-roll • Color grading</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="video-box aspect-16-9">
+          <video loop muted playsinline poster="pod.png">
+            <source src="https://veloracreativesltd.my.canva.site/_assets/video/b6355c786ae27634d7a99373454fa1b0.mp4" />
+          </video>
+          <div class="video-overlay">
+            <div class="play-btn">
+              <span>▶</span>
+            </div>
+          </div>
+          <span class="category-chip">Podcast Edit</span>
+        </div>
+        <div class="doc-info">
+          <div class="info-top">
+            <h3>How AI is Changing Everything</h3>
+            <span class="duration-badge">18:20</span>
+          </div>
+          <p>Kinetic typography • Fast-paced B-roll • Color grading</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <script src="demo.js"></script>
+</body>
+</html>
