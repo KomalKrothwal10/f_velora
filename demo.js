@@ -470,7 +470,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       title: "Rhythms Aesthetic Society",
-      category: "Development",
+      category: "Design & Development",
       type: "Shopify",
       link: "https://rhythms.org.sg/",
       img: "rhythms.org.sg_.png"
