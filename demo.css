@@ -1477,10 +1477,10 @@
        5. CALL TO ACTION & FOOTER
        ========================================================================== */
     .cta-banner {
-      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      background: linear-gradient(135deg, #2b2b2d 0%, #1f1f21 100%);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: 60px 40px;
+      padding: 40px 40px;
       text-align: center;
       margin-bottom: 80px;
     }
@@ -1632,90 +1632,7 @@
   transform: rotate(6deg);
 }
 
-/* Dark Overlay gradient for readability */
-.cta-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(8, 10, 18, 0.75) 20%, rgba(8, 10, 18, 0.95) 100%);
-  z-index: 2;
-}
 
-/* Foreground Content */
-.cta-content-container {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
 
-.cta-text-side {
-  max-width: 700px;
-}
 
-.cta-title {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
-}
 
-.cta-description {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: #a0aec0;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* White CTA Button */
-.cta-btn-white {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background-color: #ffffff;
-  color: #080a12;
-  padding: 16px 32px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
-}
-
-.cta-btn-white:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
-}
-
-.cta-btn-white i {
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn-white:hover i {
-  transform: translateX(5px);
-}
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 900px) {
-  .cta-content-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cta-banner-wrapper {
-    padding: 40px 24px;
-  }
-
-  .cta-btn-white {
-    width: 100%;
-    justify-content: center;
-  }
-}
