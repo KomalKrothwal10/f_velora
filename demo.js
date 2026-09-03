@@ -350,3 +350,166 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
  
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  fadeElements.forEach((el) => observer.observe(el));
+});
+
+
+(function initVeloraCanvas() {
+    const canvas = document.getElementById('velora-canvas');
+    if(!canvas) return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+    camera.position.set(0, 0, 5);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Interactive Core (Matrix Cubes)
+    const group = new THREE.Group();
+    scene.add(group);
+
+    const geo = new THREE.BoxGeometry(0.6, 0.6, 0.6);
+    const mat = new THREE.MeshPhysicalMaterial({
+      color: 0x00f0ff,
+      emissive: 0x002244,
+      roughness: 0.1,
+      metalness: 0.8,
+      clearcoat: 1.0
+    });
+
+    for(let x = -1; x <= 1; x++) {
+      for(let y = -1; y <= 1; y++) {
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.position.set(x * 0.8, y * 0.8, 0);
+        group.add(mesh);
+      }
+    }
+
+    const light = new THREE.PointLight(0xff007f, 4, 10);
+    light.position.set(2, 2, 3);
+    scene.add(light);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+
+    function animate() {
+      requestAnimationFrame(animate);
+      group.rotation.x += 0.005;
+      group.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+  })();
+
+  const projects = [
+    {
+      title: "Incredimate Studio - Website",
+      category: "Development",
+      type: "Custom Coded",
+      link: "https://www.incredimate.com/",
+      img: "./www.incredimate.com_ (4).png" // Teri image
+    },
+    {
+      title: "Portfolio-Editor",
+      category: "Development",
+      type: "Custom Coded",
+      link: "https://vishal-g95k.vercel.app/",
+      img: "./vishal-g95k.vercel.app_ (1).png" // Teri image
+    },
+
+    {
+      title: "HNM Realtors Website",
+      category: "Design & Development",
+      type: "Figma",
+      link: "https://hnmrealtors.com/",
+      img: "./hnmrealtors.com_ (2).png"
+    },
+    {
+      title: "Youcreatives Podcast Website",
+      category: "Development",
+      type: "WordPress",
+      link: "https://youcreatives.se/",
+      img: "./youcreatives.se_ (1).png"
+    },
+    {
+      title: "Youcreatives Podcast Website",
+      category: "Development",
+      type: "WordPress",
+      link: "https://welsh-justin.vercel.app/",
+      img: "./welsh-justin.vercel.app_.png"
+    },
+    {
+      title: "Robinson Car Wreckers Website",
+      category: "Figma Design",
+      type: "Figma",
+      link: "https://www.figma.com/design/ckjbNOyvDq2aGpbbYJ1y0Z/Robinson---Car-Wreckers-Website?node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0",
+      img: "./www.figma.com_design_ckjbNOyvDq2aGpbbYJ1y0Z_Robinson---Car-Wreckers-Website_node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0.png"
+    },
+    {
+      title: "GK247 Current Affairs Website",
+      category: "Design & Development",
+      type: "WordPress",
+      link: "https://thegk247.com/",
+      img: "./www.thegk247.com_.png"
+    },
+    {
+      title: "BongLeads Landing page",
+      category: "Development",
+      type: "Shopify",
+      link: "https://bongleads.com/",
+      img: "./Screenshot 2026-08-21 145449.png"
+    }
+  ];
+
+  const grid = document.getElementById('portfolioGrid');
+
+  function displayProjects(items) {
+    grid.innerHTML = items.map(p => `
+      <div class="project-card">
+        <div class="card-img-holder">
+           <img class="screen-image" src="${p.img || 'https://via.placeholder.com/600x1200'}" alt="${p.title}">
+        </div>
+        <div class="card-body">
+          <span class="card-category">${p.category}</span>
+          <h3 class="card-title">${p.title}</h3>
+          <a href="${p.link || '#'}" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Filter Functionality
+  const filterBtns = document.querySelectorAll('.tag-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const filter = btn.dataset.filter;
+      if(filter === 'all') {
+        displayProjects(projects);
+      } else {
+        const filtered = projects.filter(p => p.type === filter || p.category.includes(filter));
+        displayProjects(filtered.length ? filtered : projects);
+      }
+    });
+  });
+
+  // Initial Load
+  displayProjects(projects);

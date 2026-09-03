@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ==========================================================================
+   ULTRA-PREMIUM HERO SECTION (VELORA CREATIVE AGENCY)
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #06030e; /* Matches deep space dark theme */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 20px 60px 20px;
+}
+
+#hero-3d-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Glowing Cyber Ambient Orbs */
+.hero-glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.35;
+  z-index: 2;
+  pointer-events: none;
+  animation: orbFloat 8s ease-in-out infinite alternate;
+}
+
+.cyan-orb {
+  background: #00f2fe;
+  top: -10%;
+  left: 10%;
+}
+
+.magenta-orb {
+  background: #ff007f;
+  bottom: 0%;
+  right: 10%;
+  animation-delay: -4s;
+}
+
+@keyframes orbFloat {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-40px) scale(1.1); }
+}
+
+/* Cyber Grid Background Overlay */
+.cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 2;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* Hero Container Content */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Top Agency Badge */
+.hero-badge-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #00f2fe;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00f2fe;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f2fe;
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+/* Main Heading Title */
+.hero-glitch-title {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #00c6ff 60%, #ff007f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.neon-pulse {
+  filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.4));
+}
+
+/* Description Text */
+.hero-description {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: #a0aec0;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 30px auto;
+  font-weight: 400;
+}
+
+.highlight-text {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #00f2fe;
+}
+
+/* Agency 3 Offerings Pillars Bar */
+.agency-pillars-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pillar-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.pillar-tag.graphic i { color: #ff007f; }
+.pillar-tag.video i { color: #00f2fe; }
+.pillar-tag.web i { color: #a855f7; }
+
+.pillar-tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(0, 242, 254, 0.4);
+}
+
+/* CTA Buttons */
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-3d {
+  position: relative;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.btn-3d.primary {
+  background: linear-gradient(135deg, #00f2fe, #ff007f);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
+}
+
+.btn-3d.primary:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(255, 0, 127, 0.4);
+}
+
+.btn-3d.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.btn-3d.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #25d366; /* WhatsApp green on hover */
+  color: #25d366;
+  transform: translateY(-5px);
+}
+
+/* Floating Glass Cards Left/Right */
+.floating-card-wrapper {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 8;
+  width: 270px;
+}
+
+.floating-card-wrapper.left { left: 4%; }
+.floating-card-wrapper.right { right: 4%; }
+
+.glass-card {
+  background: rgba(15, 10, 30, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 14px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 242, 254, 0.5);
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a0aec0;
+  margin-bottom: 10px;
+}
+
+.live-tag { color: #ff007f; }
+.live-tag i { font-size: 8px; margin-right: 4px; }
+
+.card-video-box {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.card-video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Browser Mockup Box for Web Dev Card */
+.mockup-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px 8px 0 0;
+}
+
+.mockup-browser-bar .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.url-text {
+  font-size: 9px;
+  color: #718096;
+  margin-left: 6px;
+  font-family: monospace;
+}
+
+.mockup-screen-content {
+  height: 140px;
+  background: linear-gradient(135deg, #12092b, #06030e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.animated-mesh-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,242,254,0.2) 0%, rgba(255,0,127,0.1) 100%);
+  filter: blur(20px);
+}
+
+.preview-title {
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.card-footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #718096;
+}
+
+.stat-highlight {
+  color: #00f2fe;
+  font-weight: 700;
+}
+
+/* Responsive Hide for Small Screens */
+@media (max-width: 1200px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- ULTRA-PREMIUM HERO / INTRO SECTION -->
+<section id="home" class="hero-section">
+  <!-- Three.js 3D Background Canvas -->
+  <canvas id="hero-3d-canvas"></canvas>
+
+  <!-- Ambient Light Orbs & Mesh Grids -->
+  <div class="hero-glow-orb cyan-orb"></div>
+  <div class="hero-glow-orb magenta-orb"></div>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Hero Main Content Center -->
+  <div class="hero-container">
+    
+    <!-- Top Agency Live Status Badge -->
+    <div class="hero-badge-wrapper">
+      <span class="hero-badge">
+        <span class="pulse-dot"></span> VELORA CREATIVE AGENCY • 360° DIGITAL STUDIO
+      </span>
+    </div>
+
+    <!-- Main Dynamic Heading -->
+    <h1 class="hero-glitch-title">
+      WE CRAFT <span class="gradient-text neon-pulse">PEAK DIGITAL</span> EXPERIENCES
+    </h1>
+
+    <p class="hero-description">
+      High-CTR <strong class="highlight-text">Graphic Design</strong>, Ultra-Retention <strong class="highlight-text">Video Editing</strong> & High-Converting <strong class="highlight-text">Web Development</strong> built to scale elite brands.
+    </p>
+
+    <!-- 3 Core Pillars Interactive Badges -->
+    <div class="agency-pillars-bar">
+      <div class="pillar-tag graphic">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Graphic Design</span>
+      </div>
+      <div class="pillar-tag video">
+        <i class="fa-solid fa-clapperboard"></i>
+        <span>Video Post-Production</span>
+      </div>
+      <div class="pillar-tag web">
+        <i class="fa-solid fa-code"></i>
+        <span>Web Architecture</span>
+      </div>
+    </div>
+
+    <!-- Call to Actions -->
+    <div class="hero-cta-group">
+      <a href="#portfolio" class="btn-3d primary">
+        <span>Explore Creative Portfolio</span>
+        <div class="btn-glow"></div>
+      </a>
+      <a href="https://wa.me/919389875216" target="_blank" class="btn-3d secondary">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Start A Project</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Floating Interactive Glass Cards (Left: Editing & Graphics | Right: Web Dev) -->
+  <div class="floating-card-wrapper left desktop-only">
+    <div class="glass-card 3d-hover">
+      <div class="card-header">
+        <span class="live-tag"><i class="fa-solid fa-circle"></i> EDITING & VFX</span>
+        <span class="time-code">4K 60FPS</span>
+      </div>
+      <div class="card-video-box">
+        <video autoplay loop muted playsinline src="https://veloracreativesltd.my.canva.site/_assets/video/28689e1d04a3eccc3347b92582165453.mp4"></video>
+      </div>
+      <div class="card-footer-info">
+        <span>Retention Rate</span>
+        <span class="stat-highlight">+85% Watch Time</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-card-wrapper right desktop-only">
+    <div class="glass-card 3d-hover">
+      <div class="card-header">
+        <span class="format-tag"><i class="fa-solid fa-laptop-code"></i> WEB & GRAPHICS</span>
+        <span class="fps-tag">LIVE DEMO</span>
+      </div>
+      <div class="card-preview-box">
+        <div class="mockup-browser-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="url-text">veloracreatives.com</span>
+        </div>
+        <div class="mockup-screen-content">
+          <div class="animated-mesh-bg"></div>
+          <span class="preview-title">Full-Stack Digital Assets</span>
+        </div>
+      </div>
+      <div class="card-footer-info">
+        <span>Custom Built</span>
+        <span class="stat-highlight">Figma • Code • Shopify</span>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
