@@ -423,14 +423,14 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Development",
       type: "Custom Coded",
       link: "https://www.incredimate.com/",
-      img: "./www.incredimate.com_ (4).png" // Teri image
+      img: "www.incredimate.com_ (4).png" // Teri image
     },
     {
       title: "Portfolio-Editor",
       category: "Development",
       type: "Custom Coded",
       link: "https://vishal-g95k.vercel.app/",
-      img: "./vishal-g95k.vercel.app_ (1).png" // Teri image
+      img: "vishal-g95k.vercel.app_ (1).png" // Teri image
     },
 
     {
@@ -438,42 +438,49 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Design & Development",
       type: "Figma",
       link: "https://hnmrealtors.com/",
-      img: "./hnmrealtors.com_ (2).png"
+      img: "hnmrealtors.com_ (2).png"
     },
     {
       title: "Youcreatives Podcast Website",
       category: "Development",
       type: "WordPress",
       link: "https://youcreatives.se/",
-      img: "./youcreatives.se_ (1).png"
+      img: "youcreatives.se_ (1).png"
     },
-    {
-      title: "Youcreatives Podcast Website",
-      category: "Development",
-      type: "WordPress",
-      link: "https://welsh-justin.vercel.app/",
-      img: "./welsh-justin.vercel.app_.png"
-    },
+    // {
+    //   title: "Youcreatives Podcast Website",
+    //   category: "Development",
+    //   type: "WordPress",
+    //   link: "https://welsh-justin.vercel.app/",
+    //   img: "welsh-justin.vercel.app_.png"
+    // },
     {
       title: "Robinson Car Wreckers Website",
       category: "Figma Design",
       type: "Figma",
       link: "https://www.figma.com/design/ckjbNOyvDq2aGpbbYJ1y0Z/Robinson---Car-Wreckers-Website?node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0",
-      img: "./www.figma.com_design_ckjbNOyvDq2aGpbbYJ1y0Z_Robinson---Car-Wreckers-Website_node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0.png"
+      img: "www.figma.com_design_ckjbNOyvDq2aGpbbYJ1y0Z_Robinson---Car-Wreckers-Website_node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0.png"
     },
     {
       title: "GK247 Current Affairs Website",
       category: "Design & Development",
       type: "WordPress",
       link: "https://thegk247.com/",
-      img: "./www.thegk247.com_.png"
+      img: "www.thegk247.com_.png"
     },
     {
-      title: "BongLeads Landing page",
+      title: "Rhythms Aesthetic Society",
       category: "Development",
       type: "Shopify",
-      link: "https://bongleads.com/",
-      img: "./Screenshot 2026-08-21 145449.png"
+      link: "https://rhythms.org.sg/",
+      img: "rhythms.org.sg_.png"
+    },
+    {
+      title: "Silver Spring",
+      category: "Development",
+      type: "Shopify",
+      link: "https://www.silverspring.in/",
+      img: "www.silverspring.in_.png"
     }
   ];
 

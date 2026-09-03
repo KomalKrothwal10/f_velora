@@ -108,7 +108,7 @@
         </div>
         
         <div class="video-container">
-          <video id="intro-showcase-video" controls poster="poster.png">
+          <video id="intro-showcase-video" playinline muted loop poster="poster.png">
             <source src="https://veloracreativesltd.my.canva.site/_assets/video/f3c0d68d70f2504d19665449c6ee37a7.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -360,7 +360,7 @@
 
       <div class="reel-card">
         <div class="video-wrapper aspect-9-16">
-         <video loop muted controls playsinline width="100%" poster="s1.png">
+         <video loop muted playsinline width="100%" poster="s1.png">
           <source src="pal.mp4" type="video/mp4" />
           Your browser does not support the video tag.
          </video>
@@ -593,14 +593,27 @@
       </p>
 
       <!-- Technology Tag Filters -->
-      <div class="filter-tags">
-        <button class="tag-btn active" data-filter="all">All</button>
-        <button class="tag-btn" data-filter="WordPress">WordPress</button>
-        <button class="tag-btn" data-filter="Figma">Figma</button>
-        <button class="tag-btn" data-filter="Shopify">Shopify</button>
-        <button class="tag-btn" data-filter="WooCommerce">WooCommerce</button>
-        <button class="tag-btn" data-filter="Custom Coded">Custom Coded</button>
-      </div>
+      <!-- Technology Tag Filters with Icons -->
+<div class="filter-tags">
+  <button class="tag-btn active" data-filter="all">
+    <i class="fa-solid fa-layer-group"></i> All Projects
+  </button>
+  <button class="tag-btn" data-filter="WordPress">
+    <i class="fa-brands fa-wordpress"></i> WordPress
+  </button>
+  <button class="tag-btn" data-filter="Figma">
+    <i class="fa-brands fa-figma"></i> Figma UI/UX
+  </button>
+  <button class="tag-btn" data-filter="Shopify">
+    <i class="fa-brands fa-shopify"></i> Shopify
+  </button>
+  <button class="tag-btn" data-filter="WooCommerce">
+    <i class="fa-solid fa-cart-shopping"></i> WooCommerce
+  </button>
+  <button class="tag-btn" data-filter="Custom Coded">
+    <i class="fa-solid fa-code"></i> Custom Coded
+  </button>
+</div>
 
       <!-- Stats Grid -->
       <!-- <div class="stats-bar">
@@ -626,11 +639,41 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-banner" id="contact">
-      <h2>Let's build something great together.</h2>
-      <p>Ready to transform your online presence? Let's book a meeting to discuss about your website project.</p>
-      <a href="demo.html" class="btn-primary" style="padding: 14px 32px; font-size: 16px;background-color: white;font: weight 800px; border-radius: 50px;color: black;">Work with us</a>
-    </section>
+    <!-- ULTRA-WIDE AGENCY CTA BANNER -->
+<section class="cta-banner-wrapper">
+  <!-- Faded Background Mockup Cards -->
+  <div class="cta-bg-mockups">
+    <div class="bg-card card-left">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Web Development Project">
+    </div>
+    <div class="bg-card card-center">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Graphic Design Portfolio">
+    </div>
+    <div class="bg-card card-right">
+      <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Video Editing Timeline">
+    </div>
+  </div>
+
+  <!-- Dark Vignette Overlay -->
+  <div class="cta-overlay"></div>
+
+  <!-- Foreground Content -->
+  <div class="cta-content-container">
+    <div class="cta-text-side">
+      <h2 class="cta-title">Let’s build something great together.</h2>
+      <p class="cta-description">
+        Ready to scale your digital presence? Let’s connect to discuss your Graphic Design, Video Editing, or Web Development projects.
+      </p>
+    </div>
+
+    <div class="cta-button-side">
+      <a href="https://wa.me/919389875216" target="_blank" class="cta-btn-white">
+        <span>Work with us</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
   </div>
    <a href="https://wa.me/919389875216" target="_blank" class="whatsapp-widget">
