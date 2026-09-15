@@ -417,106 +417,206 @@ document.addEventListener("DOMContentLoaded", function () {
     animate();
   })();
 
-  const projects = [
-    {
-      title: "Incredimate Studio - Website",
-      category: "Development",
-      type: "Custom Coded",
-      link: "https://www.incredimate.com/",
-      img: "www.incredimate.com_ (4).png" // Teri image
-    },
-    {
-      title: "Portfolio-Editor",
-      category: "Development",
-      type: "Custom Coded",
-      link: "https://vishal-g95k.vercel.app/",
-      img: "vishal-g95k.vercel.app_ (1).png" // Teri image
-    },
+  // const projects = [
+  //   {
+  //     title: "Incredimate Studio - Website",
+  //     category: "Development",
+  //     type: "Custom Coded",
+  //     link: "https://www.incredimate.com/",
+  //     img: "www.incredimate.com_ (4).png" // Teri image
+  //   },
+  //   {
+  //     title: "Portfolio-Editor",
+  //     category: "Development",
+  //     type: "Custom Coded",
+  //     link: "https://vishal-g95k.vercel.app/",
+  //     img: "vishal-g95k.vercel.app_ (1).png" // Teri image
+  //   },
 
-    {
-      title: "HNM Realtors Website",
-      category: "Design & Development",
-      type: "Figma",
-      link: "https://hnmrealtors.com/",
-      img: "hnmrealtors.com_ (2).png"
-    },
-    {
-      title: "Youcreatives Podcast Website",
-      category: "Development",
-      type: "WordPress",
-      link: "https://youcreatives.se/",
-      img: "youcreatives.se_ (1).png"
-    },
-    // {
-    //   title: "Youcreatives Podcast Website",
-    //   category: "Development",
-    //   type: "WordPress",
-    //   link: "https://welsh-justin.vercel.app/",
-    //   img: "welsh-justin.vercel.app_.png"
-    // },
-    {
-      title: "Robinson Car Wreckers Website",
-      category: "Figma Design",
-      type: "Figma",
-      link: "https://www.figma.com/design/ckjbNOyvDq2aGpbbYJ1y0Z/Robinson---Car-Wreckers-Website?node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0",
-      img: "www.figma.com_design_ckjbNOyvDq2aGpbbYJ1y0Z_Robinson---Car-Wreckers-Website_node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0.png"
-    },
-    {
-      title: "GK247 Current Affairs Website",
-      category: "Design & Development",
-      type: "WordPress",
-      link: "https://thegk247.com/",
-      img: "www.thegk247.com_.png"
-    },
-    {
-      title: "Rhythms Aesthetic Society",
-      category: "Design & Development",
-      type: "Shopify",
-      link: "https://rhythms.org.sg/",
-      img: "rhythms.org.sg_.png"
-    },
-    {
-      title: "Silver Spring",
-      category: "Development",
-      type: "Shopify",
-      link: "https://www.silverspring.in/",
-      img: "www.silverspring.in_.png"
-    }
-  ];
+  //   {
+  //     title: "HNM Realtors Website",
+  //     category: "Design & Development",
+  //     type: "Figma",
+  //     link: "https://hnmrealtors.com/",
+  //     img: "hnmrealtors.com_ (2).png"
+  //   },
+  //   {
+  //     title: "Youcreatives Podcast Website",
+  //     category: "Development",
+  //     type: "WordPress",
+  //     link: "https://youcreatives.se/",
+  //     img: "youcreatives.se_ (1).png"
+  //   },
+  //   // {
+  //   //   title: "Youcreatives Podcast Website",
+  //   //   category: "Development",
+  //   //   type: "WordPress",
+  //   //   link: "https://welsh-justin.vercel.app/",
+  //   //   img: "welsh-justin.vercel.app_.png"
+  //   // },
+  //   {
+  //     title: "Robinson Car Wreckers Website",
+  //     category: "Figma Design",
+  //     type: "Figma",
+  //     link: "https://www.figma.com/design/ckjbNOyvDq2aGpbbYJ1y0Z/Robinson---Car-Wreckers-Website?node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0",
+  //     img: "www.figma.com_design_ckjbNOyvDq2aGpbbYJ1y0Z_Robinson---Car-Wreckers-Website_node-id=0-1&p=f&t=hhhlyfbnUAhK4ZOz-0.png"
+  //   },
+  //   {
+  //     title: "GK247 Current Affairs Website",
+  //     category: "Design & Development",
+  //     type: "WordPress",
+  //     link: "https://thegk247.com/",
+  //     img: "www.thegk247.com_.png"
+  //   },
+  //   {
+  //     title: "Rhythms Aesthetic Society",
+  //     category: "Design & Development",
+  //     type: "Shopify",
+  //     link: "https://rhythms.org.sg/",
+  //     img: "rhythms.org.sg_.png"
+  //   },
+  //   {
+  //     title: "Silver Spring",
+  //     category: "Development",
+  //     type: "Shopify",
+  //     link: "https://www.silverspring.in/",
+  //     img: "www.silverspring.in_.png"
+  //   }
+  // ];
 
-  const grid = document.getElementById('portfolioGrid');
+  // const grid = document.getElementById('portfolioGrid');
 
-  function displayProjects(items) {
-    grid.innerHTML = items.map(p => `
-      <div class="project-card">
-        <div class="card-img-holder">
-           <img class="screen-image" src="${p.img || 'https://via.placeholder.com/600x1200'}" alt="${p.title}">
-        </div>
-        <div class="card-body">
-          <span class="card-category">${p.category}</span>
-          <h3 class="card-title">${p.title}</h3>
-          <a href="${p.link || '#'}" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    `).join('');
-  }
+  // function displayProjects(items) {
+  //   grid.innerHTML = items.map(p => `
+  //     <div class="project-card">
+  //       <div class="card-img-holder">
+  //          <img class="screen-image" src="${p.img || 'https://via.placeholder.com/600x1200'}" alt="${p.title}">
+  //       </div>
+  //       <div class="card-body">
+  //         <span class="card-category">${p.category}</span>
+  //         <h3 class="card-title">${p.title}</h3>
+  //         <a href="${p.link || '#'}" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+  //       </div>
+  //     </div>
+  //   `).join('');
+  // }
 
   // Filter Functionality
-  const filterBtns = document.querySelectorAll('.tag-btn');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  // const filterBtns = document.querySelectorAll('.tag-btn');
+  // filterBtns.forEach(btn => {
+  //   btn.addEventListener('click', () => {
+  //     filterBtns.forEach(b => b.classList.remove('active'));
+  //     btn.classList.add('active');
       
-      const filter = btn.dataset.filter;
-      if(filter === 'all') {
-        displayProjects(projects);
-      } else {
-        const filtered = projects.filter(p => p.type === filter || p.category.includes(filter));
-        displayProjects(filtered.length ? filtered : projects);
-      }
-    });
-  });
+  //     const filter = btn.dataset.filter;
+  //     if(filter === 'all') {
+  //       displayProjects(projects);
+  //     } else {
+  //       const filtered = projects.filter(p => p.type === filter || p.category.includes(filter));
+  //       displayProjects(filtered.length ? filtered : projects);
+  //     }
+  //   });
+  // });
 
   // Initial Load
-  displayProjects(projects);
+  // displayProjects(projects);
+
+  document.addEventListener("DOMContentLoaded", () => {
+  // 1. Create a single master observer
+  const observerOptions = {
+    root: null,
+    threshold: 0.12
+  };
+
+  const masterObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const parentGrid = card.parentElement;
+        if (!parentGrid) return;
+
+        const allCards = Array.from(parentGrid.children);
+        const index = allCards.indexOf(card);
+
+        // Check card type & grid layout
+        const isReel = card.classList.contains("reel-card");
+        const isWebProject = card.classList.contains("project-card");
+        const isDoc = card.classList.contains("doc-card");
+
+        const columnsCount = isReel ? 3 : 2;
+        const isSlow = isWebProject; // Apply slower animation to web showcase
+        const col = index % columnsCount;
+
+        if (columnsCount === 3) {
+          if (col === 0) card.classList.add(isSlow ? "animate-left-slow" : "animate-left");
+          else if (col === 1) card.classList.add(isSlow ? "animate-top-slow" : "animate-top");
+          else if (col === 2) card.classList.add(isSlow ? "animate-right-slow" : "animate-right");
+        } else {
+          if (col === 0) card.classList.add(isSlow ? "animate-left-slow" : "animate-left");
+          else if (col === 1) card.classList.add(isSlow ? "animate-right-slow" : "animate-right");
+        }
+
+        obs.unobserve(card);
+      }
+    });
+  }, observerOptions);
+
+  // Helper function to observe cards
+  function observeCards() {
+    const cards = document.querySelectorAll(".reel-card, .doc-card, .project-card");
+    cards.forEach((card) => {
+      // Avoid re-observing cards that have already animated
+      if (
+        !card.classList.contains("animate-left") &&
+        !card.classList.contains("animate-right") &&
+        !card.classList.contains("animate-top") &&
+        !card.classList.contains("animate-left-slow") &&
+        !card.classList.contains("animate-right-slow") &&
+        !card.classList.contains("animate-top-slow")
+      ) {
+        masterObserver.observe(card);
+      }
+    });
+  }
+
+  // 2. Initial run for static cards
+  observeCards();
+
+  // 3. Watch for dynamically rendered cards in portfolioGrid
+  const grid = document.getElementById("portfolioGrid");
+  if (grid) {
+    const mutationObserver = new MutationObserver(() => {
+      observeCards();
+    });
+
+    mutationObserver.observe(grid, { childList: true, subtree: true });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Service Cards ke liye Observer
+  const serviceCards = document.querySelectorAll(".service-card"); // Agar class alag h to yaha change kr skte ho
+
+  const serviceObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const parentGrid = card.parentElement;
+        const allCards = Array.from(parentGrid.children);
+        const index = allCards.indexOf(card);
+
+        const col = index % 3;
+
+        // 3 Cards Layout Animation
+        if (col === 0) card.classList.add("animate-left-cinematic");
+        else if (col === 1) card.classList.add("animate-top-cinematic");
+        else if (col === 2) card.classList.add("animate-right-cinematic");
+
+        obs.unobserve(card);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  serviceCards.forEach((card) => serviceObserver.observe(card));
+});
