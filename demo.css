@@ -1636,3 +1636,211 @@
 
 
 
+
+
+/* ==========================================================================
+   7. NICHE-SPECIFIC PORTFOLIO SECTION
+   ========================================================================== */
+.portfolio-section {
+  padding: 120px 0;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* 9:16 Vertical Reels Grid */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.reel-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform var(--transition-fast);
+}
+
+.reel-card:hover {
+  transform: translateY(-4px);
+}
+
+.aspect-9-16 {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  background: #000;
+  position: relative;
+}
+
+.aspect-9-16 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reel-card .card-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.reel-card .card-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 16:9 Long-Form Video Cards Grid */
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+}
+
+
+.doc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #000;
+}
+
+.aspect-16-9 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doc-info {
+  padding: 20px;
+}
+
+.info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.info-top h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.duration-badge {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.doc-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   FORCE STRICT LEFT ALIGNMENT FOR NICHE HEADERS
+   ========================================================================== */
+.niche-header-left {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important; /* Forces all flex children to the left edge */
+  justify-content: flex-start !important;
+  text-align: left !important;
+  margin-bottom: 28px !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+  justify-content: space-evenly;
+}
+
+.niche-header-left .tag-badge {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  align-self: flex-start !important;
+}
+
+.niche-header-left .portfolio-title {
+  text-align: left !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+  font-size: 2rem !important;
+}
+
+/* ==========================================================================
+   EXPLORE MORE BUTTON CSS (DESKTOP + PHONE RESPONSIVE)
+   ========================================================================== */
+/* .niche-header-left {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+} */
+
+/* Button Styling */
+.btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-card, rgba(255, 255, 255, 0.08));
+  border-radius: 30px;
+  color: var(--text-main, #f3f4f6);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.btn-explore svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-explore:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-explore:hover svg {
+  transform: translateX(4px);
+}
+
+/* Phone Layout Handling */
+@media (max-width: 640px) {
+  .btn-explore {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Phone screen par text 'More' ho jayega taaki overflow na ho */
+  .btn-explore .btn-text {
+    display: none;
+  }
+  .btn-explore::before {
+    content: "More";
+  }
+}
