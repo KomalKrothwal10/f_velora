@@ -1844,3 +1844,60 @@
     content: "More";
   }
 }
+
+
+/* --- Media Wrapper: Edge-to-Edge with Zero Extra Gaps --- */
+.card-media-wrapper {
+  width: 100%;
+  border-radius: 14px; /* Matches the card's inner radius */
+  overflow: hidden;
+  background: #050508;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 0 !important; /* Koi extra padding nahi, ekdum edge tak */
+}
+
+/* 9:16 Vertical Ratio for Shorts & VFX Cards */
+.card-media-wrapper.ratio-vertical {
+  aspect-ratio: 9 / 16;
+  max-height: 320px;
+  width: 100%; /* Pura width cover karega, side me gap nahi aayega */
+}
+
+/* Dual Stacked Container for Long-Form (Card 2) - Zero Gap between videos */
+.card-media-wrapper.dual-stacked-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px; /* Sirf 4px ka halka sa gap dono videos ke beech taaki alag dikhein */
+  aspect-ratio: 9 / 16;
+  max-height: 320px;
+  width: 100%;
+  background: #050508;
+}
+
+/* Individual Stacked 16:9 Videos filling edges */
+.card-video.ratio-horizontal-stacked {
+  width: 100%;
+  flex: 1; /* Pura available vertical space evenly divide kar lenge */
+  object-fit: cover;
+  border-radius: 0; /* Outer wrapper khud rounded hai, isliye sharp edges flush rahengi */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Standard single video tag (for Card 1 and 3) */
+.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover zoom effect */
+.service-card:hover .card-video,
+.service-card:hover .card-video.ratio-horizontal-stacked {
+  transform: scale(1.03);
+}
